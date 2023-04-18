@@ -1,12 +1,13 @@
-answer = input("When was the first known use of the word 'quiz'? ")
-if answer == "1781":
-    print("Correct!")
-else:
-    print(f"The answer is '1781', not {answer!r}")
+QUESTIONS = [
+    ("In what year was Minecraft fully released", "2011"),
+    ("Minecraft has been used in educational environments to teach computer science, computer-aided design, and what other subject", "Chemistry"),
+    ("What is the mobile version of the game called", "Minecraft Earth")
+]
 
-answer = input("Which built-in function can get information from the user? ")
-if answer == "input":
-    print("Correct!")
-else:
-    print(f"The answer is '1781', not {answer!r}")
-    
+for question, correct_answer in QUESTIONS:
+    answer = input(f"{question}? ")
+    if answer == correct_answer:
+        print("Correct!")
+    else:
+        print(f"The answer is {correct_answer!r}, not {answer!r}")
+
