@@ -1,13 +1,30 @@
-QUESTIONS = [
-    ("In what year was Minecraft fully released", "2011"),
-    ("Minecraft has been used in educational environments to teach computer science, computer-aided design, and what other subject", "Chemistry"),
-    ("What is the mobile version of the game called", "Minecraft Earth")
-]
+QUESTIONS = {
+    "In what year was Minecraft fully released?": [
+        "2011", "2009", "2015", "2021"
+    ],
+    "Minecraft has been used in educational environments to teach computer science, computer-aided design, and what other subject?": [
+        "Chemistry", "Math", "Geography", "Language"
+    ],
+    "What is the mobile version of the game called?": [
+        "Minecraft Earth", "Minecraft Bedrock", "Minecraft Java", "Minecraft Mobile"
+    ],
+    "The game follows a day and night cycle. How long does one full cycle last in real-time?": [
+        "20 minutes",
+        "30 minutes",
+        "45 minutes",
+        "1 hour",
+    ],
+}
 
-for question, correct_answer in QUESTIONS:
-    answer = input(f"{question}? ")
+for question, alternatives in QUESTIONS.items():
+    correct_answer = alternatives[0]
+    sorted_alternatives = sorted(alternatives)
+    for label, alternative in enumerate(alternatives):
+        print(f"  {label}) {alternative}")
+
+    answer_label = int(input(f"{question}? "))
+    answer = sorted_alternatives[answer_label]
     if answer == correct_answer:
         print("Correct!")
     else:
         print(f"The answer is {correct_answer!r}, not {answer!r}")
-
