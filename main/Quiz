@@ -13,11 +13,47 @@ QUESTIONS = {
     "What is the mobile version of the game called?": [
         "Minecraft Earth", "Minecraft Bedrock", "Minecraft Java", "Minecraft Mobile"
     ],
-    "The game follows a day and night cycle. How long does one full cycle last in real-time?": [
-        "20 minutes",
-        "30 minutes",
-        "45 minutes",
-        "1 hour",
+    "What was the game intially going to be called?": [
+        "Cave Game",
+        "Block Boy",
+        "Machine Mining",
+        "Mineblock",
+    ],
+    "Which species began due to a coding error?": [
+        "Creeper",
+        "Skeleton",
+        "Chicken",
+        "Bee",
+    ],
+    "How long did it take developers to create the first version of Minecraft?": [
+        "6 days",
+        "3 years",
+        "1 year",
+        "6 months",
+    ],
+    "Which country had Minecraft become mandatory in it's cirriculum?": [
+        "Sweden",
+        "Norway",
+        "UK",
+        "Irelenad",
+    ],
+    "What problem does tonic cure?": [
+        "Nausea",
+        "Tiredness",
+        "Hunger",
+        "Mining fatigue",
+    ],
+    "What do Evokers drop?": [
+        "Totems of undying",
+        "High tier enchants",
+        "Experience orb",
+        "Gold ingots",
+    ],
+    "A Husk is a type of zombie found in only one place. Where is this?": [
+        "Desert",
+        "Arctic",
+        "Deep cave systems",
+        "Jungle",
     ],
 }
 
