@@ -68,23 +68,17 @@ def run_quiz():
 
     print(f"\nYou got {num_correct} correct out of {num} questions")
 
+    #Add quit statement
+    print("Thank you for playing! Please type quit to exit.")
+    if NUM_QUESTIONS_PER_QUIZ == 5: 
+        while (text := input()) != "quit":
+         print(f"Echo: {text}")
+
 ##METHODS TO RUN
 # Defining question selection, taking the arguements of questions and minimum samples(question iterations) to form
 def prepare_questions(questions, num_questions):
     num_questions = min(num_questions, len(questions))
     return random.sample(list(questions.items()), k=num_questions)
-
-# Defining answer return, taking question and alternatives as arguements
-def get_answer(question, alternatives):
-    print(f"{question}")
-    labeled_alternatives = dict(zip(ascii_lowercase, alternatives))
-    for label, alternative in labeled_alternatives.items():
-        print(f"  {label}) {alternative}")
-
-    while (answer_label := input("\nChoice? ")) not in labeled_alternatives:
-        print(f"Please answer one of {', '.join(labeled_alternatives)}")
-
-    return labeled_alternatives[answer_label]
 
 # Defining question method, taking the list of questions alternatives, and returning integer outputs based on if input was correct/incorrect.
 def ask_question(question, alternatives):
@@ -98,7 +92,19 @@ def ask_question(question, alternatives):
     else:
         print(f"The answer is {correct_answer!r}, not {answer!r}")
         return 0
-    
+
+# Defining answer return, taking question and alternatives as arguements
+def get_answer(question, alternatives):
+    print(f"{question}")
+    labeled_alternatives = dict(zip(ascii_lowercase, alternatives))
+    for label, alternative in labeled_alternatives.items():
+        print(f"  {label}) {alternative}")
+
+    while (answer_label := input("\nChoice? ")) not in labeled_alternatives:
+        print(f"Please answer one of {', '.join(labeled_alternatives)}")
+
+    return labeled_alternatives[answer_label]
+
 # Starts application (i.e. runs when called as script but not upon import)
 if __name__ == "__main__":
     run_quiz()
