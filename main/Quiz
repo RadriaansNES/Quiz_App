@@ -70,9 +70,9 @@ def run_quiz():
 
     #Add quit statement
     print("Thank you for playing! Please type quit to exit.")
-    if NUM_QUESTIONS_PER_QUIZ == 5: 
-        while (text := input()) != "quit":
-         print(f"Echo: {text}")
+    while (text := input()) != "quit":
+        print("Please type quit to exit the program.")
+         
 
 ##METHODS TO RUN
 # Defining question selection, taking the arguements of questions and minimum samples(question iterations) to form
